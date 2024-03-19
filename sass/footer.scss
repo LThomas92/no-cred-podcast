@@ -1,0 +1,42 @@
+.site-footer {
+    background-color: $darkBlue;
+    &__logo-container {
+        img {
+            height: 5rem;
+        }
+    }
+    &__description {
+        display: block;
+        font-size: 0.9rem;
+        margin: 1.2rem 0;
+        color: $lightGrey;
+    }
+    .site-info {
+        display: flex;
+        justify-content: space-between;
+        @include container-margins;
+        padding: 2.5rem 0;
+    }
+    &__social-icons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.3rem;
+    }
+    &__social-icon {
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+    .footer-navigation {
+        ul {
+            list-style: none;
+            li {
+                a {
+                    color: rgba($lightGrey, 0.5);
+                }
+            }
+        }
+    }
+}
+

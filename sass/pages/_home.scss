@@ -1,0 +1,353 @@
+.c-home {
+    &__header {
+        background-color: $green;
+        padding-top: 5rem;
+        padding-bottom: 6rem;
+    }
+    &__header-content-section {
+        display: flex;
+        justify-content: space-between;
+        @include container-margins;
+    }
+    &__header-title {
+        h1 {
+            color: $white;
+            font-size: 3rem;
+            strong {
+                font-weight: 700;
+                position: relative;
+                z-index: 10;
+                &::after {
+                    content: '';
+                    background-color: $darkBlue;
+                    width: 100%;
+                    height: 0;
+                    padding-bottom: 0.8rem;
+                    display: block;
+                    position: absolute;
+                    bottom: 9px;
+                    left: 0;
+                    z-index: -1;
+                }
+            }
+        }
+        margin-bottom: 1.5rem;
+    }
+
+    &__header-desc {
+        color: $white;
+    }
+
+    &__header-cta {
+        color: $white;
+        background-color: $darkBlue;
+        padding: 0.8rem 0;
+        padding-left: 1rem;
+        padding-right: 3.5rem;
+        text-align: center;
+        margin-top: 2.5rem;
+        position: relative;
+        display: inline-block;
+        &::after {
+            content: '';
+            background-image: url('../img/icons/check-white.svg');
+            background-size: 20px 20px;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            position: absolute; /* Position the pseudo-element */
+            top: 50%; /* Align to the vertical center of the parent */
+            transform: translateY(-50%); /* Adjust for exact centering */
+            right: 0; /* Align to the right edge of the parent */
+            margin-right: 0.5rem;
+        }
+    }
+
+    &__header-content {
+        flex-basis: calc((100% / 3) - 0.5rem);
+    }
+    &__header-images {
+        flex-basis: calc((100% / 2) - 1rem);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem
+    }
+    &__header-big-image {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 3.5rem;
+        &::before {
+            content: "";
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 0;
+            padding-bottom: 80%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+            transition: .3s cubic-bezier(.64,.04,.35,1);
+            &:hover {
+                transform: scale(1.05);
+              }
+        }
+    }
+
+    &__header-med-image {
+        position: relative;
+        overflow: hidden;
+        &::before {
+            content: "";
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+            transition: .3s cubic-bezier(.64,.04,.35,1);
+            &:hover {
+                transform: scale(1.05);
+              }
+        }
+    }
+    &__header-small-image {
+        position: relative;
+        overflow: hidden;
+        &::before {
+            content: "";
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 0;
+            padding-bottom: 65%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+            transition: .3s cubic-bezier(.64,.04,.35,1);
+            &:hover {
+                transform: scale(1.05);
+              }
+        }
+    }
+
+    //HOME --> ABOUT SECTION
+
+    &__about-us {
+        background-color: $white;
+        padding: 4rem;
+    }
+
+    &__about-content-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include container-margins;
+    }
+
+    &__about-features-section {
+        flex-basis: calc((100% / 2) - 2rem);
+    }
+
+    &__about-images {
+        flex-basis: calc((100% / 2) - 2rem);
+    }
+
+    &__about-big-image {
+        position: relative;
+        overflow: hidden;
+        box-shadow: $box-shadow-light-black--2;
+        &::before {
+            content: "";
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 0;
+            padding-bottom: 65%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+        }
+    }
+
+    &__about-small-image {
+        position: relative;
+        overflow: hidden;
+        margin-top: 1.5rem;
+        box-shadow: $box-shadow-light-black--2;
+        &::before {
+            content: "";
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 0;
+            padding-bottom: 65%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+        }
+    }
+
+    &__about-features-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__about-feature-desc {
+        color: rgba($lightGrey, 0.5);
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+
+    &__about-features {
+        margin-top: 3rem;
+    }
+
+    &__about-feature {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        line-height: 24px;
+        &::before {
+            content: '';
+            background-image: url('../img/icons/check.svg');
+            background-size: 15px 15px;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            vertical-align: middle;
+            margin-right: 1rem;
+            z-index: 1;
+        }
+    }
+
+    &__about-feature-cta {
+        border: 2px solid $green;
+        color: $green;
+        padding: 0.8rem 1.2rem;
+        display: inline-block;
+        margin-top: 1.5rem;
+        transition: all 300ms ease-in;
+        &:hover {
+            background-color: $green;
+            color: $white;
+        }
+    }
+
+
+    //Popular Podcasts Section
+    &__popular-podcasts {
+        background-color: $offWhite;
+        padding: 4rem;
+    }
+
+    &__popular-podcasts-section {
+        @include container-margins;
+    }
+
+    &__popular-podcasts-title {
+        text-align: center;
+        margin-bottom: 2rem;
+        h2 {
+            strong {
+                font-weight: 700;
+                position: relative;
+                z-index: 10;
+                &::after {
+                    content: '';
+                    background-color: $green;
+                    width: 100%;
+                    height: 0;
+                    padding-bottom: 0.4rem;
+                    display: block;
+                    position: absolute;
+                    bottom: 4px;
+                    left: 0;
+                    z-index: -1;
+                } 
+            }
+        }
+    }
+
+    &__popular-podcasts-desc {
+        text-align: center;
+    }
+
+    &__popular-podcasts-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        margin-top: 3rem;
+    }
+
+    &__popular-podcast-list-item {
+        flex-basis: calc((100% / 3) - 1rem);
+    }
+
+    &__popular-podcast-list-item-image {
+        position: relative;
+        overflow: hidden;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        &::before {
+            content: "";
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 0;
+            padding-bottom: 65%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+        }
+    }
+
+    &__popular-podcast-list-item-title {
+        margin-bottom: 1rem;
+    }
+
+    &__popular-podcast-list-item-desc {
+        color: rgba($lightGrey, 0.5);
+        font-size: 0.9rem;
+    }
+
+    &__popular-podcast-list-item-cta {
+        background-color: $green;
+        color: $white;
+        padding: 0.8rem 1.4rem;
+        display: inline-block;
+        margin-top: 1.5rem;
+    }
+
+
+}

@@ -1,0 +1,83 @@
+.episodes {
+   .site-header__container {
+        background-color: transparent;
+        position: relative;
+        z-index: 10;
+   }
+   #site-navigation{
+     li a {
+      color: $darkBlue;
+     }
+   }
+}
+
+.c-episodes {
+    &__featured-episode {
+        position: relative;
+        z-index: 1;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(180deg, #002E25 0%, rgba(0, 46, 37, 0) 100%);
+            z-index: 10;
+            display: block;
+        }
+    }
+       
+    &__featured-episode-thumbnail {
+       img {
+        width: 100vw;
+        max-height: 600px;
+        height: 100%;
+        object-fit: cover;
+        z-index: 5;
+       }
+    }
+    
+    &__featured-episode-title {
+        color: $white;
+        font-weight: 500;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-bottom: 1.5rem;
+    }
+
+    &__featured-episode-desc {
+        color: $white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    &__featured-episode-cta {
+        display: inline-block;
+        margin-top: 2rem;
+        background-color: $green;
+        color: $white;
+        padding: 0.8rem 1.2rem;
+    }
+
+    &__featured-episode-content {
+       position: absolute;
+       top: 15%;
+       left: 25%;
+       z-index: 12;
+    }
+
+
+    //LIST EPISODES 
+    &__list-section {
+        margin-top: 5rem;
+        padding-bottom: 5rem
+    }
+    &__list {
+        @include container-margins;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    &__episode {
+        flex-basis: calc((100% / 3) - 1.5rem);
+    }
+}
