@@ -24,7 +24,11 @@
 	<?php wp_head(); ?>
 </head>
 
+<<<<<<< HEAD
 <body <?php body_class(strtolower(get_the_title())); ?>>
+=======
+<body <?php body_class(); ?>>
+>>>>>>> origin/main
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 

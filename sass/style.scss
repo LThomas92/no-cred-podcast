@@ -7,7 +7,11 @@
 
 //Pages
 @import "pages/home";
+<<<<<<< HEAD
 @import "pages/episodes";
+=======
+
+>>>>>>> origin/main
 
 
 body {
@@ -65,3 +69,10 @@ body {
   li, a, button, p {
     font-family: $roboto;
   }
+<<<<<<< HEAD
+=======
+
+  [aria-current="page"] {
+    color: $green !important;
+  }
+>>>>>>> origin/main
