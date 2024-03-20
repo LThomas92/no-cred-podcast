@@ -30,6 +30,16 @@ if( $featured_episodes ): ?>
 
 
 <section class="c-episodes__list-section">
+    <?php 
+        $episodesTitle = get_field('episodes_title');
+        $episodesDesc = get_field('episodes_description');
+    ?>
+
+<div class="c-episodes__title-content">
+    <div class="c-episodes__title"><?php echo $episodesTitle; ?></div>
+    <p class="c-episodes__desc"><?php echo $episodesDesc; ?></p>
+</div>
+
     
 <?php $args = array(
     'post_type' => 'episodes', 
@@ -46,7 +56,16 @@ if ($episodesQuery->have_posts()) { ?>
         $episodesQuery->the_post();
         ?>
         <li class="c-episodes__episode">
+            <a href="<?php the_permalink(); ?>">
+            <figure class="c-episodes__episode-thumb">
+                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+            </figure>
             <h3 class="c-episodes__episode-title"><?php the_title(); ?></h3>
+            <p class="c-episodes__episode-desc"><?php echo get_the_excerpt(); ?></p>
+            <p class="c-episodes__episode-air-date"><span>Air Date:</span><?php echo esc_html(get_field('air_date')); ?></p>
+
+            <a href="<?php echo get_the_permalink(); ?>" class="c-episodes__episode-cta">Watch here</a>
+            </a>
         </li>
         <?php
     }

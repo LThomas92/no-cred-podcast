@@ -1,0 +1,21 @@
+.c-single-episode {
+    @include container-margins;
+    &__header {
+
+    }
+
+    &__audio-player {
+        width: 300px;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        padding: 20px;
+        audio {
+            width: 100%;
+        outline: none; 
+        &::-webkit-media-controls-panel {
+            background-color: rgba(200,200,200,1);
+            width:350px;
+        }
+        }
+    }
+}

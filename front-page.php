@@ -14,16 +14,12 @@
         <div class="c-home__header-content">
             <div class="c-home__header-title"><?php echo $headerTitle; ?></div>
             <p class="c-home__header-desc"><?php echo $headerDesc; ?></p>
-<<<<<<< HEAD
             <div class="c-home__header-cta-container">
             <a class="c-home__header-cta" href="<?php echo $headerCTA['url']; ?>"><?php echo $headerCTA['title']; ?></a>
 
     </div>
 
 
-=======
-            <a class="c-home__header-cta" href="<?php echo $headerCTA['url']; ?>"><?php echo $headerCTA['title']; ?></a>
->>>>>>> origin/main
         </div>
         <div class="c-home__header-images">
             <figure class="c-home__header-big-image">

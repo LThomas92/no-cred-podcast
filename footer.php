@@ -70,7 +70,7 @@ endif;
 			  $podcastLink = get_sub_field('podcast_link');
 		?>
         <li class="site-footer__podcasts-icon">
-			<a target="_blank" href="<?php echo $podcastLink['url']; ?>">
+			<a target="_blank" href="<?php echo $podcastLink; ?>">
 				<img src="<?php echo $podcastIcon['url']; ?>" alt="<?php echo $podcastIcon['alt']; ?>">
 			</a>
 		</li>

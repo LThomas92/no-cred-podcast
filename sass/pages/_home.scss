@@ -1,6 +1,6 @@
 .c-home {
     &__header {
-        background-color: $darkBlue;
+        background-color: $green;
         padding-top: 5rem;
         padding-bottom: 6rem;
     }
@@ -19,7 +19,7 @@
                 z-index: 10;
                 &::after {
                     content: '';
-                    background-color: $green;
+                    background-color: $darkBlue;
                     width: 100%;
                     height: 0;
                     padding-bottom: 0.8rem;
@@ -35,7 +35,7 @@
     }
 
     &__header-desc {
-        color: $lightGrey;
+        color: $white;
     }
 
     &__header-cta {

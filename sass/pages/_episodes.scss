@@ -67,6 +67,58 @@
 
 
     //LIST EPISODES 
+
+    &__title-content {
+        @include container-margins;
+    }
+
+    &__title {
+        margin-bottom: 2rem;
+        h3 {
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.8rem;
+            position: relative;
+            color: $darkBlue;
+            strong {
+                font-weight: 700;
+                position: relative;
+                z-index: 10;
+                &::after {
+                    content: '';
+                    background-color: $green;
+                    width: 100%;
+                    height: 0;
+                    padding-bottom: 0.5rem;
+                    display: block;
+                    position: absolute;
+                    bottom: 5px;
+                    left: 0;
+                    z-index: -1;
+                }
+            }
+            &::after {
+                content: '';
+                background-image: url('../img/icons/podcast-icon.svg');
+                background-repeat: no-repeat;
+                background-size: 30px 30px;
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                margin-left: 1rem;
+                vertical-align: middle;
+                z-index: 1;
+            }
+        }
+    }
+
+    &__desc {
+        margin-bottom: 3.5rem;
+        text-align: center;
+        font-size: 0.9rem;
+        color: $lightGrey;
+    }
+
     &__list-section {
         margin-top: 5rem;
         padding-bottom: 5rem
@@ -75,9 +127,75 @@
         @include container-margins;
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
 
     }
     &__episode {
-        flex-basis: calc((100% / 3) - 1.5rem);
+        flex-basis: calc((100% / 3) - 2rem);
+        margin-bottom: 4.5rem;
+    }
+
+    &__episode-title {
+        color: $green;
+        font-weight: 500;
+    }
+
+    &__episode-desc {
+        display: block;
+        margin-top: 0.5rem;
+        color: $darkBlue;
+        font-size: 0.9rem;
+    }
+
+    &__episode-air-date {
+        display: block;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+        color: $lightGrey;
+        span {
+            margin-right: 0.2rem;
+        }
+    }
+
+    &__episode-cta {
+        display: inline-block;
+        border: 1.2px solid $green;
+        color: $green;
+        padding: 0.8rem 1.2rem;
+        margin-top: 1.5rem;
+        transition: all 300ms ease-in;
+        &:hover {
+            background-color: $green;
+            color: $white;
+        }
+    }
+
+    &__episode-thumb {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        margin-bottom: 0.8rem;
+        &::before {
+            content: "";
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 0;
+            padding-bottom: 80%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+            box-shadow: $box-shadow-light-black;
+            transition: all 300ms ease-in;
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
     }
 }
