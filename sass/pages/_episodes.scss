@@ -176,6 +176,7 @@
         overflow: hidden;
         display: block;
         margin-bottom: 0.8rem;
+        z-index: 1;
         &::before {
             content: "";
             position: relative;

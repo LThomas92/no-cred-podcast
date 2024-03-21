@@ -16,14 +16,34 @@
                 "class": "",
                 "id": ""
             },
-            "display_format": "m\/d\/Y",
-            "return_format": "m\/d\/Y",
+            "display_format": "F j, Y",
+            "return_format": "F j, Y",
             "first_day": 1
         },
         {
             "key": "field_65fb05edfb282",
             "label": "Audio File",
             "name": "audio_file",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_65fc4a58dddf0",
+            "label": "Video File",
+            "name": "video_file",
             "aria-label": "",
             "type": "file",
             "instructions": "",
@@ -59,5 +79,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710949895
+    "modified": 1711037606
 }

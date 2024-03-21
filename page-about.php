@@ -29,6 +29,8 @@
             <div class="c-page-about__list-item-content">
                 <h2 class="c-page-about__list-item-title"><?php echo $aboutName; ?></h2>
                 <div class="c-page-about__list-item-description"><?php echo $aboutDesc; ?></div>
+
+                <p class="c-page-about__list-item-social-title">Find us on:</p>
                 
                 <?php if( have_rows('about_social_icons') ): ?>
 
