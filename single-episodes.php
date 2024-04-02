@@ -145,30 +145,26 @@
 
         </div>
 
-        <div class="audioplayer">
-  <audio preload="auto" controls style="width: 0px; height: 0px; visibility: hidden;">
-    <source src="<?php echo $audioFile['url']; ?>">
+        <div class="c-single-episode__audio-player-container">
+        <div class="audio-player">
+  <audio id="myAudio" preload="auto">
+    <source src="<?php echo $audioFile['url']; ?>" type="audio/mpeg">
+    Your browser does not support the audio element.
   </audio>
-  <div class="audioplayer-playpause" title=""><a href="#"></a></div>
-  <div class="audioplayer-time audioplayer-time-current">00:00</div>
-  <div class="audioplayer-bar">
-    <div class="audioplayer-bar-loaded" style="width: 100%;"></div>
-    <div class="audioplayer-bar-played"></div>
-  </div>
-  <div class="audioplayer-time audioplayer-time-duration">00:56</div>
-  <div class="audioplayer-volume">
-    <div class="audioplayer-volume-button" title=""><a href="#"></a></div>
-    <div class="audioplayer-volume-adjust">
-      <div>
-        <div style="width: 100%;"></div>
-      </div>
-    </div>
+  <div class="controls">
+    <button id="playPause">Play</button>
+    <input id="volume" type="range" min="0" max="1" step="0.01" value="1">
+    <span id="timeDisplay">0:00 / 0:00</span>
+    <button id="stop">Stop</button>
   </div>
 </div>
-            
+
+
+
+</div>
+        
+        
         </section>
-
-
     </div>
 </div>
 

@@ -691,9 +691,7 @@
   width: calc(100vw - calc(16px * 2));
   max-width: 959px;
   margin-left: auto !important;
-  margin-right: auto !important;
-  /* RemixDesign | woaichidapi@163.com | Redesigned by JimmyCheung */
-  /* responsive | you can change the max-width value to match your theme */ }
+  margin-right: auto !important; }
   @media (min-width: 1440px) {
     .c-single-episode {
       max-width: 1200px; } }
@@ -968,171 +966,13 @@
     fill: #fff;
     stroke: #fff;
     cursor: pointer; }
-  .c-single-episode .audioplayer {
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-    margin: 1em 0;
-    padding: 0 24px;
-    width: 100%;
-    height: 96px;
-    align-items: center;
-    border: 1px solid #DDE2E6;
-    border-radius: 4px;
-    background: #fff; }
-  .c-single-episode .audioplayer-playpause {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all .2s ease-in-out; }
-  .c-single-episode .audioplayer:not(.audioplayer-playing) .audioplayer-playpause {
-    background: rgba(91, 130, 255, 0);
-    border: 1px solid #5B82FF; }
-  .c-single-episode .audioplayer:not(.audioplayer-playing) .audioplayer-playpause:hover {
-    background: rgba(91, 130, 255, 0.1); }
-  .c-single-episode .audioplayer-playing .audioplayer-playpause {
-    background: rgba(253, 79, 26, 0);
-    border: 1px solid #FD4F1A; }
-  .c-single-episode .audioplayer-playing .audioplayer-playpause:hover {
-    background: rgba(235, 79, 26, 0.1); }
-  .c-single-episode .audioplayer:not(.audioplayer-playing) .audioplayer-playpause a {
-    content: '';
-    justify-content: center;
-    width: 0;
-    height: 0;
-    margin-left: 2px;
-    border-top: 7px solid transparent;
-    border-right: none;
-    border-bottom: 7px solid transparent;
-    border-left: 12px solid #0059FF; }
-  .c-single-episode .audioplayer-playing .audioplayer-playpause a {
-    content: '';
-    display: flex;
-    justify-content: space-between;
-    width: 12px;
-    height: 14px; }
-  .c-single-episode .audioplayer-playing .audioplayer-playpause a::before, .c-single-episode .audioplayer-playing .audioplayer-playpause a::after {
-    content: '';
-    width: 4px;
-    height: 14px;
-    background-color: #FD4F1A; }
-  .c-single-episode .audioplayer-time {
-    display: flex;
-    width: 40px;
-    justify-content: center;
-    font-size: 12px;
-    color: rgba(51, 51, 51, 0.6); }
-  .c-single-episode .audioplayer-time-current {
-    margin-left: 24px; }
-  .c-single-episode .audioplayer-time-duration {
-    margin-right: 24px; }
-  .c-single-episode .audioplayer-bar {
-    position: relative;
-    display: flex;
-    margin: 0 12px;
-    height: 12px;
-    flex-basis: 0;
-    flex-grow: 1;
-    cursor: pointer; }
-  .c-single-episode .audioplayer-bar::before {
-    content: '';
-    position: absolute;
-    top: 5px;
-    width: 100%;
-    height: 2px;
-    background-color: #DDE2E6; }
-  .c-single-episode .audioplayer-bar > div {
-    position: absolute;
-    left: 0;
-    top: 5px; }
-  .c-single-episode .audioplayer-bar-loaded {
-    z-index: 1;
-    height: 2px;
-    background: #BEC8D2; }
-  .c-single-episode .audioplayer-bar-played {
-    flex-direction: row-reverse;
-    z-index: 2;
-    height: 2px;
-    background: -webkit-linear-gradient(left, #0059FF, #09B1FA); }
-  .c-single-episode .audioplayer-bar-played::after {
-    display: flex;
-    position: absolute;
-    content: '';
-    box-sizing: border-box;
-    top: -5px;
-    right: -1px;
-    margin-right: -5px;
-    width: 12px;
-    height: 12px;
-    background-color: #fff;
-    border-radius: 6px; }
-  .c-single-episode .audioplayer:not(.audioplayer-playing) .audioplayer-bar-played::after {
-    border: 2px solid #BEC8D2; }
-  .c-single-episode .audioplayer-playing .audioplayer-bar-played::after {
-    border: 2px solid #0059FF; }
-  .c-single-episode .audioplayer-volume {
+  .c-single-episode__audio-player-container .audio-player {
+    margin: 20px; }
+  .c-single-episode__audio-player-container .controls {
     display: flex;
     align-items: center; }
-  .c-single-episode .audioplayer-volume-button {
-    display: flex;
-    align-items: center;
-    width: 24px;
-    height: 24px;
-    cursor: pointer; }
-  .c-single-episode .audioplayer-volume-button a {
-    display: flex;
-    width: 6px;
-    height: 8px;
-    background-color: #9A9FB0;
-    position: relative; }
-  .c-single-episode .audioplayer-volume-button a:before, .c-single-episode .audioplayer-volume-button a:after {
-    content: '';
-    position: absolute; }
-  .c-single-episode .audioplayer-volume-button a:before {
-    width: 0;
-    height: 0;
-    border-top: 8px solid transparent;
-    border-right: 9px solid #9A9FB0;
-    border-bottom: 8px solid transparent;
-    border-left: none;
-    top: -4px; }
-  .c-single-episode .audioplayer:not(.audioplayer-mute) .audioplayer-volume-button a:after {
-    left: 10px;
-    top: -2px;
-    width: 6px;
-    height: 6px;
-    border: 6px double #9A9FB0;
-    border-width: 6px 6px 0 0;
-    border-radius: 0 12px 0 0;
-    transform: rotate(45deg); }
-  .c-single-episode .audioplayer-mute .audioplayer-volume-button a {
-    background-color: #FD4F1A; }
-  .c-single-episode .audioplayer-mute .audioplayer-volume-button a:before {
-    border-right: 9px solid #FD4F1A; }
-  .c-single-episode .audioplayer-volume-adjust {
-    display: flex;
-    align-items: center;
-    margin-left: 8px; }
-  .c-single-episode .audioplayer-volume-adjust > div {
-    position: relative;
-    display: flex;
-    width: 60px;
-    height: 2px;
-    cursor: pointer;
-    background-color: #BEC8D2; }
-  .c-single-episode .audioplayer-volume-adjust div div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2px;
-    background-color: #0059FF; }
-  @media screen and (max-width: 679px) {
-    .c-single-episode .audioplayer-volume-adjust {
-      display: none; } }
+  .c-single-episode__audio-player-container button {
+    margin-right: 10px; }
 
 body {
   position: relative;
