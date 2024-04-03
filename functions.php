@@ -147,6 +147,8 @@ function laws_and_codes_scripts() {
 	wp_enqueue_script('veganease-js', get_template_directory_uri() . $main->js, ['jquery, slick-js'], null, true);
 	wp_enqueue_style( 'slick-style',"//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css");
 	wp_enqueue_script('slick-js', "//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js", ['jquery'], null, true);
+	wp_enqueue_style( 'plyr-style',"//cdn.plyr.io/3.7.8/plyr.css");
+	wp_enqueue_script('plyr-js', "//cdn.plyr.io/3.7.8/plyr.js", ['jquery'], null, true);
 
 	wp_enqueue_script('veganease-styles-js', get_template_directory_uri() . $main->js, ['jquery', 'slick-js'], null, true);
 
