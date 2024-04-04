@@ -35,6 +35,9 @@
         height: 100%;
         object-fit: cover;
         z-index: 5;
+        @media only screen and (max-width: $tablet_max) {
+            max-height: 800px;
+        }
        }
     }
     
@@ -43,11 +46,17 @@
         font-weight: 500;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         margin-bottom: 1.5rem;
+        @media only screen and (max-width: $tablet_max) {
+            font-size: 1.3rem;
+        }
     }
 
     &__featured-episode-desc {
         color: $white;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        @media only screen and (max-width: $tablet_max) {
+            font-size: 0.9rem;
+        }
     }
 
     &__featured-episode-cta {
@@ -129,7 +138,9 @@
         justify-content: space-between;
         align-items: flex-start;
         flex-wrap: wrap;
-
+        @media only screen and (max-width: $tablet_max) {
+            flex-direction: column;
+        }
     }
     &__episode {
         flex-basis: calc((100% / 3) - 2rem);

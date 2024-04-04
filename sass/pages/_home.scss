@@ -8,6 +8,9 @@
         display: flex;
         justify-content: space-between;
         @include container-margins;
+        @media only screen and (max-width: $tablet_max) {
+            flex-direction: column;
+        }
     }
     &__header-title {
         h1 {
@@ -70,7 +73,11 @@
         flex-basis: calc((100% / 2) - 1rem);
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 2rem
+        grid-gap: 2rem;
+        @media only screen and (max-width: $tablet_max) {
+            grid-template-columns: 1fr;
+            margin-top: 4rem;
+        }
     }
     &__header-big-image {
         position: relative;
@@ -152,6 +159,10 @@
     &__about-us {
         background-color: $white;
         padding: 4rem;
+        @media only screen and (max-width: $tablet_max) {
+            padding: 0;
+             margin-top: 2.5rem;
+        }
     }
 
     &__about-content-section {
@@ -159,14 +170,24 @@
         justify-content: space-between;
         align-items: center;
         @include container-margins;
+        @media only screen and (max-width: $tablet_max) {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
     }
 
     &__about-features-section {
         flex-basis: calc((100% / 2) - 2rem);
+        @media only screen and (max-width: $tablet_max) {
+            order: 1;
+        }
     }
 
     &__about-images {
         flex-basis: calc((100% / 2) - 2rem);
+        @media only screen and (max-width: $tablet_max) {
+            order: 2;
+        }
     }
 
     &__about-big-image {
@@ -217,6 +238,9 @@
     &__about-features-title {
         font-size: 2rem;
         margin-bottom: 1.5rem;
+        @media only screen and (max-width: $tablet_max) {
+            margin-top: 0.5rem;
+        }
     }
 
     &__about-feature-desc {
@@ -252,6 +276,7 @@
         padding: 0.8rem 1.2rem;
         display: inline-block;
         margin-top: 1.5rem;
+        margin-bottom: 2rem;
         transition: all 300ms ease-in;
         &:hover {
             background-color: $green;
@@ -264,6 +289,10 @@
     &__popular-podcasts {
         background-color: $offWhite;
         padding: 4rem;
+        @media only screen and (max-width: $tablet_max) {
+           padding: 0;
+           padding-bottom: 2.5rem;
+        }
     }
 
     &__popular-podcasts-section {
@@ -273,6 +302,10 @@
     &__popular-podcasts-title {
         text-align: center;
         margin-bottom: 2rem;
+        @media only screen and (max-width: $tablet_max) {
+            padding-top: 2rem;
+            margin-top: 1.5rem;
+        }
         h2 {
             strong {
                 font-weight: 700;
@@ -303,6 +336,10 @@
         justify-content: space-between;
         align-items: stretch;
         margin-top: 3rem;
+        @media only screen and (max-width: $tablet_max) {
+            flex-direction: column;
+            margin-bottom: 2.5rem;
+         }
     }
 
     &__popular-podcast-list-item {

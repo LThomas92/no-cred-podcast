@@ -16,13 +16,23 @@
         justify-content: space-between;
         @include container-margins;
         padding: 2.5rem 0;
+        @media only screen and (max-width: $tablet_max) {
+           flex-direction: column;
+        }
     }
     &__social-icons {
         display: flex;
         justify-content: space-between;
         margin-top: 1.3rem;
+        @media only screen and (max-width: $tablet_max) {
+            justify-content: unset;
+            margin-bottom: 1.5rem;
+        }
     }
     &__social-icon {
+        @media only screen and (max-width: $tablet_max) {
+            margin-right: 1rem;
+        }
         img {
             width: 1.5rem;
             height: 1.5rem;
@@ -33,7 +43,11 @@
             list-style: none;
             li {
                 a {
-                    color: rgba($lightGrey, 0.5);
+                    color: $white;
+                    @media only screen and (max-width: $tablet_max) {
+                        display: block;
+                        margin-bottom: 0.5rem;
+                    }
                 }
             }
         }
@@ -42,6 +56,9 @@
         color: rgba($lightGrey, 0.5);
         font-size: 1rem;
         font-weight: 500;
+        @media only screen and (max-width: $tablet_max) {
+            margin-top: 1.2rem;
+        }
     }
 
     &__podcasts-icons {
@@ -50,9 +67,21 @@
         align-items: center;
         vertical-align: middle;
         margin-top: 1.2rem;
+        @media only screen and (max-width: $tablet_max) {
+            justify-content: unset;
+        }
     }
     &__podcasts-icon {
         flex-basis: calc((100% / 3) - 1rem);
+        @media only screen and (max-width: $tablet_max) {
+            flex-basis: 1.5rem;
+            margin-right: 1.2rem;
+        }
+        img {
+            @media only screen and (max-width: $tablet_max) {
+                height: 1.5rem;
+            }
+        }
     }
 }
 

@@ -51,8 +51,67 @@
 		<div class="site-header__meta-info">
 			<img title="Search Icon" class="site-header__search" src="<?php echo get_template_directory_uri(); ?>/img/search.svg"" alt="Search Icon"/>
 			<button class="site-header__login">Sign In</button>
+			<button class="site-header__signup">Sign Up</button>
 		</div>
 
+		<!-- MOBILE MENU -->
+	<div id="nav-icon3" class="site-header__menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+		<!-- MOBILE MENU -->
+
+		<!-- MOBILE OVERLAY -->
+
+		<div class="mobile-menu-overlay">
+	<div class="mobile-menu-overlay__container">
+	<div class="mobile-menu-overlay__header">
+	
+	<a href="<?php echo site_url(); ?>">
+    <img title="No Cred Logo" class="mobile-menu-overlay__logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="No Cred Logo"/>
+    </a>
+
+	<img class="mobile-menu-overlay__close-icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/close-icon.svg" alt="Close Icon"/>
+
+	</div>
+  <nav class="mobile-navigation">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				)
+			);
+			?>
+			
+		
+		</nav><!-- #site-navigation -->
+		
+		<div class="mobile-menu-overlay__signup-btns">
+			<button class="site-header__login">Sign In</button>
+			<button class="site-header__signup">Sign Up</button>
+		</div>
+		
+
+		</div>
+  </div>
+
+		<!-- MOBILE OVERLAY -->
 
 	</header><!-- #masthead -->
 	</div>
+
+	<div class="overlay-menu">
+<img class="close-icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/close-icon-blue.svg" alt="Close Icon"/>
+  <div class="overlay-menu__container-margins">
+<div class="header-search-form">
+    <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+  <label>
+      <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'What are you looking for?', 'placeholder' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+  </label>
+  <button type="submit" name="submit" value="submit"></button>
+</form>
+    </div> <!-- header search form -->
+    </div> <!-- container margins -->
+</div> <!-- overlay menu -->
