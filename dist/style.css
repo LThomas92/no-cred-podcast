@@ -98,6 +98,12 @@
     top: 9px; }
   .site-header #nav-icon3 span:nth-child(4) {
     top: 36px; }
+  .site-header__account-name {
+    color: #fff;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    transition: all 300ms ease-in; }
+    .site-header__account-name:hover {
+      color: #1B2033; }
 
 @media only screen and (max-width: 1024px) {
   #site-navigation {
@@ -1104,6 +1110,196 @@
     margin-right: 1.2rem; }
     .c-single-episode__podcast-service img {
       height: 1.4rem; }
+
+.c-page-login {
+  width: calc(100vw - calc(16px * 2));
+  max-width: 959px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 2.5rem; }
+  @media (min-width: 1440px) {
+    .c-page-login {
+      max-width: 1200px; } }
+  @media (max-width: 767px) {
+    .c-page-login {
+      width: calc(100vw - calc(16px * 2)); } }
+  .c-page-login__main-section {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.15), 25px 0px 20px -20px rgba(0, 0, 0, 0.15), 0px 25px 20px -20px rgba(0, 0, 0, 0.15), -25px 0px 20px -20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 2.5rem;
+    padding-left: 2.5rem; }
+    @media only screen and (max-width: 1024px) {
+      .c-page-login__main-section {
+        flex-direction: column;
+        padding-left: 0; } }
+  .c-page-login__login-section {
+    flex-basis: calc((100% / 2) - 1rem); }
+    @media only screen and (max-width: 1024px) {
+      .c-page-login__login-section {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin-bottom: 2rem; } }
+  .c-page-login__image {
+    flex-basis: calc((100% / 2) - 2rem);
+    position: relative;
+    overflow: hidden; }
+    .c-page-login__image::before {
+      content: "";
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-bottom: 120%; }
+    .c-page-login__image img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      object-fit: cover; }
+  .c-page-login .login-username label, .c-page-login .login-password label, .c-page-login .login-remember label {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400 !important;
+    display: block;
+    margin-bottom: 0.5rem !important; }
+  .c-page-login .login-username {
+    padding-top: 2.5rem; }
+  .c-page-login .login-password {
+    display: block;
+    margin-top: 2.5rem !important; }
+  .c-page-login #wp-submit {
+    background-color: #02946D;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 0.5rem; }
+  .c-page-login input[type="text"], .c-page-login input[type="password"] {
+    border: none;
+    border-bottom: 1.2px solid #1B2033;
+    background-color: transparent;
+    width: 100%;
+    color: #1B2033; }
+    .c-page-login input[type="text"]:focus, .c-page-login input[type="password"]:focus {
+      outline: none; }
+  .c-page-login hr {
+    display: none !important; }
+  .c-page-login input:-webkit-autofill,
+  .c-page-login input:-webkit-autofill:hover,
+  .c-page-login input:-webkit-autofill:focus,
+  .c-page-login input:-webkit-autofill:active {
+    -webkit-background-clip: text;
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #fff; }
+  .c-page-login .pmpro_message {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    padding-top: 2.5rem;
+    margin-bottom: 2rem;
+    color: #71737C;
+    font-family: "Roboto", sans-serif; }
+  .c-page-login .pmpro_actions_nav {
+    text-align: left;
+    margin-top: 2rem; }
+    .c-page-login .pmpro_actions_nav a {
+      color: #1B2033;
+      transition: all 300ms ease-in; }
+      .c-page-login .pmpro_actions_nav a:hover {
+        color: #02946D; }
+
+.c-page-membership-account {
+  width: calc(100vw - calc(16px * 2));
+  max-width: 959px;
+  margin-left: auto !important;
+  margin-right: auto !important; }
+  @media (min-width: 1440px) {
+    .c-page-membership-account {
+      max-width: 1200px; } }
+  @media (max-width: 767px) {
+    .c-page-membership-account {
+      width: calc(100vw - calc(16px * 2)); } }
+  .c-page-membership-account h3 {
+    margin-bottom: 2.5rem !important; }
+  .c-page-membership-account .pmpro_table th {
+    font-family: "Roboto", sans-serif;
+    padding-bottom: 30px;
+    text-align: left; }
+  .c-page-membership-account .pmpro_table td {
+    font-family: "Roboto", sans-serif; }
+    .c-page-membership-account .pmpro_table td a {
+      background-color: #02946D;
+      color: #fff;
+      display: block;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      padding: 0.8rem 1.2rem;
+      max-width: 25%;
+      width: 100%;
+      text-align: center;
+      text-shadow: none; }
+  .c-page-membership-account #pmpro_account {
+    margin-top: 3rem; }
+
+#pmpro_account-profile li strong {
+  font-family: "Roboto", sans-serif; }
+
+#pmpro_actionlink-levels {
+  background-color: #1B2033;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  padding: 0.8rem 1.2rem; }
+
+#pmpro_actionlink-profile, #pmpro_actionlink-change-password, #pmpro_actionlink-logout {
+  color: #71737C !important; }
+
+.pmpro_account-membership-levelname {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #1B2033;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); }
+
+.c-page-membership-levels {
+  width: calc(100vw - calc(16px * 2));
+  max-width: 959px;
+  margin-left: auto !important;
+  margin-right: auto !important; }
+  @media (min-width: 1440px) {
+    .c-page-membership-levels {
+      max-width: 1200px; } }
+  @media (max-width: 767px) {
+    .c-page-membership-levels {
+      width: calc(100vw - calc(16px * 2)); } }
+  .c-page-membership-levels .pmpro_actions_nav {
+    display: block;
+    margin-bottom: 2.5rem !important; }
+
+#pmpro_levels_table {
+  margin: 2.5rem 0; }
+  #pmpro_levels_table th {
+    font-family: "Raleway", sans-serif !important;
+    font-weight: 600;
+    text-align: left !important;
+    color: #02946D !important; }
+  #pmpro_levels_table td strong {
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 500; }
+  #pmpro_levels_table .pmpro_btn {
+    background-color: #1B2033 !important;
+    color: #fff;
+    margin-left: 2rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0px;
+    font-weight: 400; }
+
+#pmpro_levels-return-account {
+  background-color: #02946D;
+  color: #fff;
+  padding: 0.8rem 1.2rem; }
 
 body {
   position: relative;

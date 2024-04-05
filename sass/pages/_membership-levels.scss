@@ -1,0 +1,35 @@
+.c-page-membership-levels {
+    @include container-margins;
+    .pmpro_actions_nav {
+        display: block;
+        margin-bottom: 2.5rem !important;
+    }
+}
+
+#pmpro_levels_table {
+    margin: 2.5rem 0;
+    th {
+        font-family: $raleway !important;
+        font-weight: 600;
+        text-align: left !important;
+        color: $green !important;
+    }
+    td strong {
+        font-family: $roboto !important;
+        font-weight: 500;
+    }
+    .pmpro_btn {
+        background-color: $darkBlue !important;
+        color: $white;
+        margin-left: 2rem;
+        padding: 0.8rem 1.2rem;
+        border-radius: 0px;
+        font-weight: 400;
+    }
+}
+
+#pmpro_levels-return-account {
+    background-color: $green;
+    color: $white;
+    padding: 0.8rem 1.2rem;
+}

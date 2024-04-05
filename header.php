@@ -49,9 +49,18 @@
 		</nav><!-- #site-navigation -->
 
 		<div class="site-header__meta-info">
+			<?php 
+				$loginURL = get_field('login_url', 'option');
+				$signupCTA = get_field('signup_cta', 'option');
+				$current_user = wp_get_current_user();
+			?>
 			<img title="Search Icon" class="site-header__search" src="<?php echo get_template_directory_uri(); ?>/img/search.svg"" alt="Search Icon"/>
-			<button class="site-header__login">Sign In</button>
-			<button class="site-header__signup">Sign Up</button>
+			<?php if (!is_user_logged_in()) { ?>
+			<a href="<?php echo $loginURL['url']; ?>" class="site-header__login">Sign In</a>
+			<a href="#" class="site-header__signup">Sign Up</a>
+			<?php } else { ?>
+				<a href="<?php echo site_url() . '/membership-account' ?>" class="site-header__account-name"><?php echo $current_user->user_login; ?></a>
+			<?php } ?>
 		</div>
 
 		<!-- MOBILE MENU -->
@@ -89,7 +98,9 @@
 		</nav><!-- #site-navigation -->
 		
 		<div class="mobile-menu-overlay__signup-btns">
-			<button class="site-header__login">Sign In</button>
+			<?php if (!is_user_logged_in()) { ?>
+				<a href="<?php echo $loginURL['url']; ?>" class="site-header__login">Sign In</a>
+			<?php } ?>
 			<button class="site-header__signup">Sign Up</button>
 		</div>
 		

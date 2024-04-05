@@ -1,0 +1,56 @@
+.c-page-membership-account {
+    @include container-margins;
+    h3 {
+        margin-bottom: 2.5rem !important;
+    }
+    .pmpro_table {
+        th {
+            font-family: $roboto;
+            padding-bottom: 30px;
+            text-align: left;
+        }
+        td {
+            font-family: $roboto;
+            a {
+                background-color: $green;
+                color: $white;
+                display: block;
+                margin-top: 1.5rem;
+                margin-bottom: 1rem;
+                padding: 0.8rem 1.2rem;
+                max-width: 25%;
+                width: 100%;
+                text-align: center;
+                text-shadow: none;
+            }
+        }
+    }
+    #pmpro_account {
+        margin-top: 3rem;
+    }
+}
+
+#pmpro_account-profile {
+    li strong {
+        font-family: $roboto;
+    }
+}
+
+#pmpro_actionlink-levels {
+    background-color: $darkBlue;
+    color: $white;
+    font-family: $roboto;
+    padding: 0.8rem 1.2rem;
+}
+
+#pmpro_actionlink-profile, #pmpro_actionlink-change-password, #pmpro_actionlink-logout{
+    color: $lightGrey !important;
+}
+
+.pmpro_account-membership-levelname {
+    font-family: $raleway;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: $darkBlue;
+    text-shadow: 5px 5px 5px rgba($black,0.3);
+}
