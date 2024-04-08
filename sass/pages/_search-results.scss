@@ -1,0 +1,74 @@
+.c-page-search-results {
+    @include container-margins;
+    margin: 2.5rem 0;
+    &__page-title {
+        margin-bottom: 1rem;
+        color: $green;
+        span {
+            color: $black;
+        }
+    }
+    &__number {
+        font-size: 1.25rem;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5rem;
+    }
+    &__list-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2.5rem;
+        margin-bottom: 3.5rem;
+        figure {
+            position: relative;
+            overflow: hidden;
+            box-shadow: $box-shadow-light-black--2;
+            &::before {
+                content: "";
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 0;
+                padding-bottom: 65%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                object-fit: cover;
+                transition: all 300ms ease-in;
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+    &__list-item-desc {
+        color: $lightGrey;
+    }
+    &__list-item-title {
+        margin-bottom: 1.2rem;
+        font-weight: 500;
+        color: $darkBlue;
+    }
+    &__list-item-air-date {
+        display: block;
+        margin-top: 1.2rem; 
+        color: $lightGrey;
+        span {
+            margin-right: 0.25rem;
+        }
+    }
+    &__list-item-cta {
+        transition: all 300ms ease-in;
+        &:hover {
+            .c-page-search-results__list-item-title {
+                color: $green;
+           }
+        }
+    }
+}
